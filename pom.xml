@@ -2,36 +2,49 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.sentryj</groupId>
-	<artifactId>tapn-secure-ppk</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>tapn-secure-ppk</name>
-	<description>tapn-secure-ppk is a lightweight, modular security framework designed to make JWT authentication and authorization in microservice architectures effortless and consistent. Built with plug-and-play flexibility in mind, it empowers developers to implement secure communication between services without rewriting security logic across every project.</description>
+
+	<groupId>io.donkie.tapn</groupId>
+	<artifactId>secure-auth-ppk</artifactId>
+	<version>1.0.0</version>
+
+	<name>secure-auth-ppk</name>
+
+	<description>tapn's secure-auth-ppk is a lightweight, modular security framework designed to make JWT authentication and authorization in microservice architectures effortless and consistent. Built with plug-and-play flexibility in mind, it empowers developers to implement secure communication between services without rewriting security logic across every project.</description>
+
 	<url/>
+
 	<licenses>
 		<license/>
 	</licenses>
+
 	<developers>
-		<developer/>
+		<developer>
+			<id>rajumb0232</id>
+			<name>Raju Gowda</name>
+		</developer>
 	</developers>
+
 	<scm>
 		<connection/>
 		<developerConnection/>
-		<tag/>
 		<url/>
+		<tag/>
 	</scm>
+
 	<properties>
 		<java.version>17</java.version>
 		<lombok.version>1.18.30</lombok.version>
 		<jjwt.version>0.11.5</jjwt.version>
 		<maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
 	</properties>
+
 	<dependencies>
 
 		<!-- Spring Security -->

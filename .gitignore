@@ -33,3 +33,4 @@ build/
 .vscode/
 .gitattributes
 .mvn/wrapper/maven-wrapper.jar # ignoring repo bloat
+.qodo
