@@ -1,4 +1,4 @@
-# secure-auth-ppk
+# tapn-secure-auth-ppk
 
 **Secure Plug-and-Play Kit (PPK)** for effortless JWT authentication in Spring Boot microservices.  
 Built under the [tapn](https://tapn.donkie.io) tooling suite from [donkie.io](https://donkie.io).
