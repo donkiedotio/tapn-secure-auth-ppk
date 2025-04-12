@@ -1,4 +1,4 @@
-package io.donkie.tapn.secure.core;
+package io.donkie.tapn.secure.utility;
 
 import io.donkie.tapn.secure.models.DeliveryMode;
 import io.donkie.tapn.secure.models.SignatureAlgorithm;

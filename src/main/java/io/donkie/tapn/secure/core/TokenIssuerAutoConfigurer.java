@@ -13,7 +13,7 @@ import java.util.List;
 @Component
 @AllArgsConstructor
 @Slf4j
-public class TokenIssuerAutoConfigurer {
+public final class TokenIssuerAutoConfigurer {
 
     private final TapnTokenProperties tokenProperties;
     private final List<TokenIssuerDraft> drafts;

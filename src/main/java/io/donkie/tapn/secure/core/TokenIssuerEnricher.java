@@ -1,8 +1,9 @@
 package io.donkie.tapn.secure.core;
 
+import io.donkie.tapn.secure.config.TapnTokenProperties;
 import io.donkie.tapn.secure.models.TokenType;
 import io.donkie.tapn.secure.models.config.TokenIssuerDraft;
-import io.donkie.tapn.secure.config.TapnTokenProperties;
+import io.donkie.tapn.secure.utility.TokenDefaults;
 import org.apache.logging.log4j.util.InternalApi;
 
 import java.time.Duration;
