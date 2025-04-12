@@ -1,11 +1,13 @@
 package io.donkie.tapn.secure.core;
 
+import io.donkie.tapn.secure.jwt.JwtGeneratorService;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 class TokenIssuer {
 
     private final TokenIssuerAware tokenIssuerAware;
+    private final JwtGeneratorService jwtGeneratorService;
 
     /*
      * Need to support two ways of Token Delivery Mode
