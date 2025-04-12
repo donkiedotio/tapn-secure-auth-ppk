@@ -8,7 +8,7 @@ import java.time.Duration;
 import java.util.Map;
 
 public final class TokenDefaults {
-    public static final String QUALIFIED_ISSUER_NAME = null;
+    public static final String ID = "defaultTokenIssuer";
     public static final String ISSUER = null;
     public static final SignatureAlgorithm ALGORITHM = SignatureAlgorithm.RS256;
 

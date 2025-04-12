@@ -1,7 +1,6 @@
 package io.donkie.tapn.secure.core;
 
 import lombok.AllArgsConstructor;
-import io.donkie.tapn.secure.models.TokenIssuerAware;
 
 @AllArgsConstructor
 public class TokenIssuer {

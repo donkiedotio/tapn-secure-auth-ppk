@@ -17,6 +17,7 @@ import java.util.Map;
 @Component
 @ConfigurationProperties("tapn.token")
 public class TapnTokenProperties {
+    private String id;
     private String issuer;
     private SignatureAlgorithm algorithm;
     private DeliveryMode deliveryMode;
