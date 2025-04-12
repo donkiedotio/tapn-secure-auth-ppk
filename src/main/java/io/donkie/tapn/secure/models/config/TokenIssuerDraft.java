@@ -54,8 +54,18 @@ public class TokenIssuerDraft {
             return this;
         }
 
+        public DraftBuilder withTokensAndValidity(Map<TokenType, Duration> validityMap) {
+            this.tokenValidityMap = validityMap;
+            return this;
+        }
+
         public DraftBuilder withTokensAndNbf(UnaryOperator<TokenNbfConfigurer> configurerUnaryOperator) {
             this.nbfMap = configurerUnaryOperator.apply(new TokenNbfConfigurer()).setup();
+            return this;
+        }
+
+        public DraftBuilder withTokensAndNbf(Map<TokenType, Duration> nbfMap) {
+            this.nbfMap = nbfMap;
             return this;
         }
 
