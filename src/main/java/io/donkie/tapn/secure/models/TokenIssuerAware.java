@@ -1,19 +1,13 @@
 package io.donkie.tapn.secure.models;
 
-import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 
 import java.time.Duration;
 import java.util.Map;
 
-/**
- * An immutable data holder that describes how a token should be issued. Instances are
- * generally built using the {@link TokenIssuerConfigurer} and then validated/used
- * within token issuance logic.
- */
 @Getter
-@Builder(access = AccessLevel.PACKAGE)
+@Builder
 public class TokenIssuerAware {
 
     /**

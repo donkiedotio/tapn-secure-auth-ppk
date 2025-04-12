@@ -10,8 +10,6 @@ import java.util.Map;
 import java.util.function.UnaryOperator;
 
 @Getter
-@Setter
-@Builder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class TokenIssuerDraft {
     // can be used as bean name when there are more than one TokenIssuer Configured
