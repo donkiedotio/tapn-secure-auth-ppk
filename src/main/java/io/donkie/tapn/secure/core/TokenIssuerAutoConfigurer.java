@@ -1,6 +1,7 @@
 package io.donkie.tapn.secure.core;
 
 import io.donkie.tapn.secure.config.TapnTokenProperties;
+import io.donkie.tapn.secure.jwt.JwtGeneratorService;
 import io.donkie.tapn.secure.models.config.TokenIssuerDraft;
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
@@ -18,7 +19,11 @@ public final class TokenIssuerAutoConfigurer {
     private final TapnTokenProperties tokenProperties;
     private final List<TokenIssuerDraft> drafts;
     private final ConfigurableApplicationContext context;
+    private final JwtGeneratorService jwtGeneratorService;
 
+    /*
+     * TODO:Need to update logic to support multiple Token Issuer Draft configuration through the application.yml
+     */
     @PostConstruct
     public void initTokenIssuer() {
         drafts.forEach(draft -> {
@@ -26,7 +31,7 @@ public final class TokenIssuerAutoConfigurer {
             var fullyEnrichedDraft = TokenIssuerEnricher.enrichFromUserOverrides(partiallyEnrichedDraft, draft);
 
             var beanName = fullyEnrichedDraft.getId();
-            var tokenIssuer = new TokenIssuer(createTokenIssuerAware(fullyEnrichedDraft));
+            var tokenIssuer = new TokenIssuer(createTokenIssuerAware(fullyEnrichedDraft), jwtGeneratorService);
 
             if (context.containsBean(beanName))
                 log.error("Duplicate TokenIssuer Id. Token issuer bean already exists with name: {}", beanName);
