@@ -4,22 +4,34 @@ import io.donkie.tapn.secure.config.TapnTokenProperties;
 import io.donkie.tapn.secure.jwt.JwtGeneratorService;
 import io.donkie.tapn.secure.models.config.TokenIssuerDraft;
 import jakarta.annotation.PostConstruct;
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
-@AllArgsConstructor
-@Slf4j
 public final class TokenIssuerAutoConfigurer {
 
     private final TapnTokenProperties tokenProperties;
     private final List<TokenIssuerDraft> drafts;
     private final ConfigurableApplicationContext context;
     private final JwtGeneratorService jwtGeneratorService;
+
+    Logger log = LoggerFactory.getLogger(TokenIssuerAutoConfigurer.class);
+
+    public TokenIssuerAutoConfigurer(
+            TapnTokenProperties tokenProperties,
+            List<TokenIssuerDraft> drafts,
+            ConfigurableApplicationContext context,
+            JwtGeneratorService jwtGeneratorService) {
+        this.tokenProperties = tokenProperties;
+        this.drafts = drafts;
+        this.context = context;
+        this.jwtGeneratorService = jwtGeneratorService;
+    }
 
     /*
      * TODO:Need to update logic to support multiple Token Issuer Draft configuration through the application.yml
@@ -34,7 +46,7 @@ public final class TokenIssuerAutoConfigurer {
             var tokenIssuer = new TokenIssuer(createTokenIssuerAware(fullyEnrichedDraft), jwtGeneratorService);
 
             if (context.containsBean(beanName))
-                log.error("Duplicate TokenIssuer Id. Token issuer bean already exists with name: {}", beanName);
+                log.error("Duplicate TokenIssuer Id. Token issuer bean already exists with name: {}", Optional.ofNullable(beanName));
             else
                 context.getBeanFactory().registerSingleton(beanName, tokenIssuer);
         });
