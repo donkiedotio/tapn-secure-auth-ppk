@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -10,18 +12,22 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>io.donkie</groupId>
-	<artifactId>tapn-secure-auth-ppk</artifactId>
+	<groupId>co.vaultiq</groupId>
+	<artifactId>vaultiq</artifactId>
 	<version>1.0.0</version>
 
-	<name>tapn-secure-auth-ppk</name>
+	<name>vaultiq</name>
 
-	<description>tapn-secure-auth-ppk is a lightweight, modular security framework designed to make JWT authentication and authorization in microservice architectures effortless and consistent. Built with plug-and-play flexibility in mind, it empowers developers to implement secure communication between services without rewriting security logic across every project.</description>
+	<description>vaultiq is a lightweight, modular security framework designed to make JWT authentication and authorization in microservice architectures effortless and consistent. Built with plug-and-play flexibility in mind, it empowers developers to implement secure communication between services without rewriting security logic across every project.</description>
 
-	<url/>
+	<url>https://vaultiq.co</url>
 
 	<licenses>
-		<license/>
+		<license>
+			<name>MIT License</name>
+			<url>https://opensource.org/licenses/MIT</url>
+			<distribution>repo</distribution>
+		</license>
 	</licenses>
 
 	<developers>
@@ -32,15 +38,14 @@
 	</developers>
 
 	<scm>
-		<connection/>
-		<developerConnection/>
-		<url/>
-		<tag/>
+		<connection>scm:git:git://github.com/vaultiq/vaultiq.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:vaultiq/vaultiq.git</developerConnection>
+		<url>https://github.com/vaultiq/vaultiq</url>
+		<tag>HEAD</tag>
 	</scm>
 
 	<properties>
 		<java.version>17</java.version>
-		<lombok.version>1.18.30</lombok.version>
 		<jjwt.version>0.11.5</jjwt.version>
 		<maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
 	</properties>
@@ -51,6 +56,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
+			<optional>true</optional>
 		</dependency>
 
 		<!-- JWT -->
@@ -72,6 +78,7 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- Encoding & Decoding Lib -->
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
@@ -82,14 +89,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<!-- Lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>${lombok.version}</version>
-			<scope>provided</scope>
 			<optional>true</optional>
 		</dependency>
 
@@ -104,15 +103,9 @@
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
-					<annotationProcessorPaths>
-						<path>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-							<version>${lombok.version}</version>
-						</path>
-					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -123,15 +116,6 @@
 							<goal>repackage</goal>
 						</goals>
 						<phase>package</phase>
-						<configuration>
-							<skip>true</skip>
-							<excludes>
-								<exclude>
-									<groupId>org.projectlombok</groupId>
-									<artifactId>lombok</artifactId>
-								</exclude>
-							</excludes>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>

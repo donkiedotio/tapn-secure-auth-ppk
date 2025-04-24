@@ -4,18 +4,19 @@ import io.donkie.tapn.secure.jwt.JwtGeneratorService;
 import io.donkie.tapn.secure.jwt.JwtPayload;
 import io.donkie.tapn.secure.models.TokenType;
 import io.donkie.tapn.secure.utility.CurrentUser;
-import lombok.AllArgsConstructor;
 
 import java.time.Instant;
-import java.util.Date;
-import java.util.List;
 import java.util.Map;
 
-@AllArgsConstructor
 class TokenIssuer {
 
     private final TokenIssuerAware tokenIssuerAware;
     private final JwtGeneratorService jwtGeneratorService;
+
+    public TokenIssuer(TokenIssuerAware tokenIssuerAware, JwtGeneratorService jwtGeneratorService) {
+        this.tokenIssuerAware = tokenIssuerAware;
+        this.jwtGeneratorService = jwtGeneratorService;
+    }
 
     /*
      * Need to support two ways of Token Delivery Mode
