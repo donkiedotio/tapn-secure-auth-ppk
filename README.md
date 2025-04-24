@@ -2,7 +2,7 @@
 
 **Vaultiq** for effortless JWT authentication in Spring Boot microservices.
 
----
+<br>
 
 ## 🚀 Overview
 
@@ -10,7 +10,7 @@ Vaultiq simplifies token-based security in distributed systems. It provides a de
 
 This library is opinionated yet flexible, designed for **modular integration** and **secure-by-default** Spring Boot setups.
 
----
+<br>
 
 ## 🔧 Features
 
@@ -24,7 +24,7 @@ This library is opinionated yet flexible, designed for **modular integration** a
 - ✅ **Secure Cookie/Authorization Header** strategies out-of-the-box
 - ⚖️ **Session Limit Policies** and concurrent device handling
 
----
+<br>
 
 ## 📦 Installation
 
@@ -36,14 +36,13 @@ For now, clone the repo and install locally:
 git clone https://github.com/your-org-name/vaultiq.git
 cd vaultiq
 ```
-
----
+<br>
 
 ## 🔗 Integration
 
 Integration examples coming soon.
 
----
+<br>
 
 ## 🔍 Why Vaultiq?
 
@@ -51,13 +50,13 @@ Unlike Keycloak or Auth0, Vaultiq gives you **full control**, **zero external de
 
 Vaultiq is ideal for teams who want an internal auth system tailored to their domain logic without the learning curve of an external identity provider.
 
----
+<br>
 
 ## 🎓 Documentation
 
 Full API docs and guides coming soon at [vaultiq.co](https://doc.vaultiq.co)
 
----
+<br>
 
 ## 📝 License
 
