@@ -5,13 +5,13 @@ Vaultiq — Effortless, powerful JWT automation for modern Spring Boot apps.
 Vaultiq automates JWT issuance, validation, and lifecycle management — without the heavyweight baggage of centralized auth servers.
 Built for microservices, modular setups, and real-world scale, Vaultiq keeps your authentication smart, simple, and secure.
 
-✅ Spring Boot native
-✅ Open source, no SaaS lock-in
-✅ Full control over your auth flows
+✅ Spring Boot native <br>
+✅ Open source, no SaaS lock-in <br>
+✅ Full control over your auth flows <br>
 
 ## ⚙️ Features at a Glance
 - 🔐 Access & Refresh Tokens — Built-in session tracking
-- 🔄 Key Rotation — Pluggable, in-memory or custom store
+- 🔄 Key Rotation — Pluggable, in-memory, or custom store
 - 🛡️ Session Management — Blacklist and revoke tokens cleanly
 - 🧠 Device Fingerprinting — Fine-grained session control
 - 🌱 Flexible Claims — Issuer, audience, subject, custom data
