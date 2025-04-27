@@ -1,13 +1,16 @@
 # 🚀 Vaultiq
 Vaultiq — Effortless, powerful JWT automation for modern Spring Boot apps.
 
-## ✨ What is Vaultiq?
+<br>
+
+## ✨ What is Vaultiq? 
 Vaultiq automates JWT issuance, validation, and lifecycle management — without the heavyweight baggage of centralized auth servers.
 Built for microservices, modular setups, and real-world scale, Vaultiq keeps your authentication smart, simple, and secure.
 
 ✅ Spring Boot native <br>
 ✅ Open source, no SaaS lock-in <br>
 ✅ Full control over your auth flows <br>
+<br>
 
 ## ⚙️ Features at a Glance
 - 🔐 Access & Refresh Tokens — Built-in session tracking
@@ -19,15 +22,20 @@ Built for microservices, modular setups, and real-world scale, Vaultiq keeps you
 - 🪄 Type-safe DSL — Define issuers and strategies elegantly
 - 🍪 Cookie or Header Auth — Secure defaults out of the box
 - ⚖️ Concurrent Session Policies — Limit logins per device/user
+<br>
 
 ## 📦 Getting Started
 Vaultiq will be available on Maven Central soon.
+
+<br>
 
 ## 🚀 How to Integrate
 Spring Boot auto-configuration + simple DSL = up and running in minutes.
 Integration guide coming soon.
 
 (Pro tip: it's stupidly simple.)
+
+<br>
 
 ## 🔥 Why Vaultiq (Instead of Keycloak, Auth0, or the Usual Overkill)?
 No external servers to manage.
@@ -42,12 +50,18 @@ Designed for real apps, not just pretty demos.
 
 Vaultiq lets you build secure authentication inside your app — without becoming a full-time identity engineer.
 
+<br>
+
 ## 📚 Documentation
 Official docs and full API reference coming soon at
 🌐 vaultiq.co
 
+<br>
+
 ## 📝 License
 MIT Licensed — Use it. Fork it. Break it. Improve it.
+
+<br>
 
 # 👊 Coming Soon
 Available on Maven Central. Stay tuned, or better yet — ⭐ star the repo now so you don’t forget.
